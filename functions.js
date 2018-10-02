@@ -19,7 +19,7 @@ function signUp() {
         window.alert("Team name is blank");
         return false;
     }
-    verified = "no";
+    var verified = "no";
     var signUpdata = {
         teamMember1: teamMember1,
         teamMember2: teamMember2,
@@ -27,7 +27,7 @@ function signUp() {
         verified: verified
     }
     ref.push(signUpdata);
-    window.location.href='https://sql-lab-ojallday.c9users.io/atwsnInvitational/teams.php'
+    window.location.href='https://atwsninvitational.herokuapp.com/teams.php'
     
     
 }
