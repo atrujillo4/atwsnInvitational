@@ -4,9 +4,10 @@
             body {
                 background-color: #E5E7E9;
             }
+            
         </style>
         <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        
 
         <link href="css/styles.css" rel="stylesheet" type="text/css" />
         <script src="https://www.gstatic.com/firebasejs/5.5.1/firebase.js"></script>
@@ -27,11 +28,12 @@
         
         <br></br>
         <center>
-        
-        Team Name: <input type="text" id="teamName" placeholder="Team Name"> <br>
-        First Team Member: <input type="text" id="teamMember1" placeholder="Epic Name"> <br>
-        Second Team Member: <input type="text" id="teamMember2" placeholder="Epic Name"> <br>
-        <button onclick="signUp()">Sign Up</button>
+        <div content="width=device-width, initial-scale=1.0">
+            Team Name: <input type="text" id="teamName" placeholder="Team Name"> <br>
+            First Team Member: <input type="text" id="teamMember1" placeholder="Epic Name"> <br>
+            Second Team Member: <input type="text" id="teamMember2" placeholder="Epic Name"> <br>
+            <button onclick="signUp()">Sign Up</button>
+        </div>
         </center>
     </body>
     <div class="footer">
