@@ -54,6 +54,12 @@
         <br>
         If there are spots left over, it will be first come first serve.
         
+        <br>
+        
+        <p id="discordMessage"></p>
+        
+        <a href='javascript:link();'> <p id="discordLink"></p> </a>
+        
         
         <div class="mainDiv" align="left">
             <h1>All Teams</h1>

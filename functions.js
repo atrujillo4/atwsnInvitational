@@ -32,6 +32,19 @@ function signUp() {
     
 }
 
+
+function discordLink(){
+    var database = firebase.database()
+    var ref = database.ref('discordLink');
+    ref.on('value', gotLink, errData);
+    //document.getElementById("discordLink").innerHTML = ref;
+}
+
+function gotLink(link){
+    console.log(link.val());
+}
+
+
 // (basic functionality) More testing required
 function submitHighlight(){
     console.log("test");

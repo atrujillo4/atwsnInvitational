@@ -25,3 +25,33 @@ ref.on("child_added", snap => {
     //alert(teamName);
     $("#table_body").append("<tr><td>" + teamName + "</td><td>" + teamMember1 + "</td><td>" + teamMember2 + "</td><td>" + "<center>" + verified + "</center>" + "</td></tr>");
 });
+
+var database = firebase.database()
+var refLink = database.ref('discordLink');
+var refMessage = database.ref('discordMessage');
+refMessage.on('value', gotMessage, errData)
+refLink.on('value', gotData, errData);
+function gotData(data){
+    console.log(data.val());
+    document.getElementById("discordLink").innerHTML = data.val();
+
+}
+function link(){
+    var link = database.ref('discordLink');
+    link.on('value', returnLink, errData)
+    
+}
+function returnLink(link){
+    var disLink = link.val();
+    window.location.href=disLink
+
+}
+function gotMessage(message){
+    document.getElementById("discordMessage").innerHTML = message.val();
+}
+function errData(err)
+{
+    
+}
+
+
