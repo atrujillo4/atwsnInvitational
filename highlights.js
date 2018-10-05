@@ -41,7 +41,14 @@ function submitHighlight(){
         window.alert("Submitted by is blank");
         return false;
     }
-    link = link.split('=')[1];
+    if(link.includes('=')){
+        link = link.split('=')[1];
+    }
+    else{
+        link = link.split('e')[1];
+        link = link.substring(1);
+    }
+    console.log(link);
     var signUpdata = {
         link: link,
         whoPosted: whoPosted
