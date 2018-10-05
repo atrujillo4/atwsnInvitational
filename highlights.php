@@ -7,10 +7,21 @@
                 background-color: #E5E7E9;
             }
         </style>
+        <style>
+            table {
+            border-collapse: collapse;
+        }
+
+        table, td, th {
+            border: 1px solid black;
+        }
+        </style>
         <meta charset="UTF-8">
         <link href="css/styles.css" rel="stylesheet" type="text/css" />
         <script src="https://www.gstatic.com/firebasejs/5.5.1/firebase.js"></script>
-        <script language="javascript" type="text/javascript" src="functions.js"></script>
+        <script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+        <script src="highlights.js"></script>
+        <!--<script language="javascript" type="text/javascript" src="functions.js"></script>-->
     </head>
     <body>
         <!-- nav Bar --> 
@@ -34,6 +45,7 @@
         Highlight URL: <input type="text" id="highlight" placeholder="Youtube link"> <br>
         Submitted By: <input type="text" id="whoPosted" placeholder="Epic Name"> <br>
         <button onclick="submitHighlight()">Submit</button>
+       
         
         <!--<iframe width="420" height="315"-->
         <!--    src="https://www.youtube.com/embed/tgbNymZ7vqY">-->
@@ -41,9 +53,22 @@
         <!--<iframe width="420" height="315"-->
         <!--    src="https://www.youtube.com/embed/gxoaLgCETgE">-->
         <!--</iframe>-->
-        <script>
-            getHighlights();
-        </script>
+        
+        
+        <div class="mainDiv" align="left">
+            <h1>All Highlights</h1>
+            <table>
+                <thead>
+                    <tr>
+                        <td><strong>Posted By</strong></td>
+                        <td><strong>Highlight</strong></td>
+                    </tr>
+                </thead>
+                <tbody id="table_body">
+                    
+                </tbody>
+            </table>
+        </div>
         
     </body>
     <div class="footer">
